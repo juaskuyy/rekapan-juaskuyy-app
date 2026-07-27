@@ -42,7 +42,9 @@ public class MainActivity extends Activity {
         progressBar = findViewById(R.id.progressBar);
         errorView = findViewById(R.id.errorView);
         Button retryButton = findViewById(R.id.retryButton);
-        retryButton.setOnClickListener(v -> loadHome());
+        if (retryButton != null) {
+    retryButton.setOnClickListener(v -> loadHome());
+        }
 
         configureWebView();
         webView.loadUrl(HOME_URL);
