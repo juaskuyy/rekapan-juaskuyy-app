@@ -25,6 +25,7 @@
         android:layout_gravity="top"
         android:max="100"
         android:progress="0"
+        android:progressTint="#D4A857"
         android:visibility="gone" />
 
 </FrameLayout>
