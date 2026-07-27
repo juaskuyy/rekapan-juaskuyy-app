@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
@@ -26,6 +28,11 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Window window = getWindow();
+        window.setStatusBarColor(android.graphics.Color.parseColor("#111827"));
+        window.setNavigationBarColor(android.graphics.Color.parseColor("#111827"));
+
         setContentView(R.layout.activity_main);
 
         webView = findViewById(R.id.webView);
@@ -75,7 +82,6 @@ public class MainActivity extends Activity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-
                 progressBar.setVisibility(ProgressBar.GONE);
                 swipeRefresh.setRefreshing(false);
             }
@@ -163,33 +169,5 @@ public class MainActivity extends Activity {
         } else {
             super.onBackPressed();
         }
-    }
-
-    @Override
-    protected void onPause() {
-        if (webView != null) {
-            webView.onPause();
-        }
-
-        super.onPause();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        if (webView != null) {
-            webView.onResume();
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        if (webView != null) {
-            webView.stopLoading();
-            webView.destroy();
-        }
-
-        super.onDestroy();
     }
 }
