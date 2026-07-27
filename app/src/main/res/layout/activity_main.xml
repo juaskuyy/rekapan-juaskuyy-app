@@ -2,18 +2,27 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#F5F5F5">
 
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="top"
+        android:max="100"
+        android:progress="0"
+        android:visibility="gone" />
+
     <LinearLayout
         android:id="@+id/errorView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="32dp"
@@ -22,8 +31,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tidak dapat membuka website"
-            android:textColor="#111820"
+            android:text="Tidak dapat membuka halaman"
+            android:textColor="#111111"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -32,8 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="Periksa koneksi internet, lalu coba lagi."
-            android:textColor="#68737D"
+            android:text="Periksa koneksi internet, lalu coba kembali."
+            android:textColor="#666666"
             android:textSize="14sp" />
 
         <Button
@@ -41,19 +50,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#C79A4B"
-            android:text="Coba Lagi"
-            android:textColor="#FFFFFF" />
+            android:text="Coba Lagi" />
+
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_gravity="top"
-        android:indeterminate="false"
-        android:max="100"
-        android:progressTint="#C79A4B"
-        android:visibility="gone" />
 </FrameLayout>
