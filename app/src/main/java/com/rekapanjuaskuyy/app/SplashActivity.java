@@ -8,7 +8,7 @@ import android.os.Looper;
 
 public class SplashActivity extends Activity {
 
-    private static final long SPLASH_DURATION = 2500;
+    private static final long SPLASH_DURATION = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,12 +16,11 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            Intent intent = new Intent(
+            startActivity(new Intent(
                     SplashActivity.this,
                     MainActivity.class
-            );
+            ));
 
-            startActivity(intent);
             finish();
         }, SPLASH_DURATION);
     }
