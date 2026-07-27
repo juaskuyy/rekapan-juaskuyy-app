@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="36dp">
+
+    <ImageView
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:contentDescription="Rekapan Juaskuyy"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_juaskuyy" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Rekapan Juaskuyy"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cash Management"
+        android:textColor="#F2D49A"
+        android:textSize="14sp"
+        android:letterSpacing="0.12" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="34dp"
+        android:indeterminateTint="#C79A4B" />
+</LinearLayout>
