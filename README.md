@@ -21,3 +21,8 @@ Aplikasi WebView profesional untuk https://juaskuyy.my.id
 4. Setelah selesai, buka hasil workflow lalu unduh artifact `Rekapan-Juaskuyy-APK`.
 
 Catatan: untuk rilis publik/Play Store, buat Signed APK/AAB dengan keystore sendiri.
+
+## Versi 1.4.0
+- Mendukung unduhan PDF, Excel, CSV, gambar, dan file lain dari website.
+- Mendukung tautan file biasa serta file yang dibuat oleh browser (`blob:`).
+- File otomatis tersimpan ke folder **Download** di HP.
