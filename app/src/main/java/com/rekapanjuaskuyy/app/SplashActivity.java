@@ -7,14 +7,22 @@ import android.os.Handler;
 import android.os.Looper;
 
 public class SplashActivity extends Activity {
+
+    private static final long SPLASH_DURATION = 2500;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            startActivity(new Intent(this, MainActivity.class));
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            Intent intent = new Intent(
+                    SplashActivity.this,
+                    MainActivity.class
+            );
+
+            startActivity(intent);
             finish();
-        }, 2200);
+        }, SPLASH_DURATION);
     }
 }
